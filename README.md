@@ -1,9 +1,8 @@
-# tech230_github_ssh
-Testing the GitHub SSH connection
+# Connecting to GitHub with SSH (Secure SHell)
 
 ### **Generating a new SSH key**
 
-1. Generate the SSH key with the following command:
+1. Open a Git Bash terminal and navigate to the `.ssh` folder; if not present, create an `.ssh` folder with `mkdir`. Following this, generate an SSH key with the following command:
 
 ```bash
 $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
@@ -47,7 +46,7 @@ The key's randomart image is:
 
 4. Navigate to the GitHub webpage and login.
 
-5. Navigate to settings then the `SSH and GPG key` tab.
+5. Navigate to `settings` then the `SSH and GPG key` tab.
 
 6. Create a new SSH key by clicking `New SSH key`.
 
@@ -57,7 +56,7 @@ The key's randomart image is:
 cat <ssh_file_name>.pub
 ```
 
-8. Name the key in the `Title`entry and paste the key into the `key` entry, keep the key type as `Authentication Key`.
+8. Name the key in the `Title` entry and paste the key into the `key` entry, keep the key type as `Authentication Key`.
 
 >Note: Becareful when copying the key to ensure no white spaces are present.
 
@@ -70,7 +69,7 @@ cat <ssh_file_name>.pub
 ```bash
 $ eval "$(ssh-agent -s)"
 ```
->This should output the following as an example.
+>The following is an example output.
 
 ![agent](agentpip.PNG)
 
